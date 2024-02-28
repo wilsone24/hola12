@@ -48,7 +48,8 @@ function Navbar() {
       <div className={`navbar--items ${navActive ? "active" : ""}`}>
         <ul>
           <li>
-            <Link
+            <a
+              href="/"
               onClick={closeMenu}
               activeClass="navbar--active-content"
               spy={true}
@@ -59,24 +60,26 @@ function Navbar() {
               className="navbar--content"
             >
               Home
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
+            <a
+              href="/about"
               onClick={closeMenu}
               activeClass="navbar--active-content"
               spy={true}
               smooth={true}
               offset={-70}
               duration={500}
-              to="MyPortfolio"
+              to="/about"
               className="navbar--content"
             >
-              Portfolio
-            </Link>
+              About
+            </a>
           </li>
           <li>
-            <Link
+            <a
+              href="/hypothesis"
               onClick={closeMenu}
               activeClass="navbar--active-content"
               spy={true}
@@ -86,11 +89,12 @@ function Navbar() {
               to="AboutMe"
               className="navbar--content"
             >
-              About Me
-            </Link>
+              Hypothesis
+            </a>
           </li>
           <li>
-            <Link
+            <a
+              href="/visualization"
               onClick={closeMenu}
               activeClass="navbar--active-content"
               spy={true}
@@ -100,23 +104,12 @@ function Navbar() {
               to="testimonial"
               className="navbar--content"
             >
-              Testimonials
-            </Link>
+              Visualization
+            </a>
           </li>
         </ul>
       </div>
-      <Link
-        onClick={closeMenu}
-        activeClass="navbar--active-content"
-        spy={true}
-        smooth={true}
-        offset={-70}
-        duration={500}
-        to="Contact"
-        className="btn btn-outline-primary"
-      >
-        Contact Me
-      </Link>
+
     </nav>
   );
 }
